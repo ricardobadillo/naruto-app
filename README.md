@@ -1,1 +1,1 @@
-# naruto-app
+# naruto-app-frontend

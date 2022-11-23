@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "naruto-app": {
+    "naruto-app-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/naruto-app",
+            "outputPath": "dist/naruto-app-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "naruto-app:build:production"
+              "browserTarget": "naruto-app-frontend:build:production"
             },
             "development": {
-              "browserTarget": "naruto-app:build:development"
+              "browserTarget": "naruto-app-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "naruto-app:build"
+            "browserTarget": "naruto-app-frontend:build"
           }
         },
         "test": {
