@@ -1,0 +1,64 @@
+<mat-sidenav-container autosize>    
+    <mat-sidenav #sidenav mode="side" position="start" fixedInViewport="true">
+        <mat-toolbar>            
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="identificacion/lista" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>menu_book</mat-icon>
+                <span>Ver usuarios</span>
+            </a>
+        </mat-nav-list>
+        
+        <mat-nav-list>
+            <a mat-list-item routerLink="identificacion/agregar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Agregar</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span routerLink="identificacion/lista" style="cursor: pointer;">URBE</span>
+        <mat-icon style="cursor: pointer;">logout</mat-icon>
+    </mat-toolbar>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+    <mat-sidenav #sidenav mode="side" opened position="end" [fixedInViewport]="true">
+        <mat-toolbar>            
+            <span routerLink="identificacion/lista" style="cursor: pointer;">URBE</span>
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="identificacion/lista" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>menu_book</mat-icon>
+                <span>Ver usuarios</span>
+            </a>
+        </mat-nav-list>
+        
+        <mat-nav-list>
+            <a mat-list-item routerLink="identificacion/agregar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Agregar</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>
+
+
+<footer style="background-color: red;">
+    roejdpeijdie Footer
+</footer>

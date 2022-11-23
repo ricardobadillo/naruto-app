@@ -1,0 +1,34 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+// Global variables.
+
+:root {
+    --special-black: #1D1D1D;
+    --special-gray: #2F2F2F;
+    
+    --gray: #707070;
+    --orange: #e34906;
+    --yellow: #facc1d;
+}
+
+
+
+// Globla fonts.
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../src/assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../src/assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Thin';
+    src: url('../src/assets/fonts/Poppins-Thin.ttf');
+}

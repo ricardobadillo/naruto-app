@@ -1,0 +1,35 @@
+<div class="contenedor">
+    <form [formGroup]="miFormulario" (ngSubmit)="register()" class="form">
+        <div class="header-container">
+            <img src="/assets/images/naruto_login.jpg" class="image-login" alt="login">
+            <h1 class="title"> Nuevo usuario </h1>
+        </div>
+    
+        <mat-form-field appearance="outline">
+            <mat-label> Nombre </mat-label>
+            <input matInput formControlName="username" autocomplete="off" placeholder="Nombre de usuario" >
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label> Email </mat-label>
+            <input matInput formControlName="email" autocomplete="off" placeholder="Usuario">
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label> Contraseña </mat-label>
+            <input matInput formControlName="password" autocomplete="off" placeholder="Contraseña" type="{{ hide ? 'text' : 'password' }}">
+            <mat-icon matSuffix (click)="showPassword()"> {{ hide ? 'visibility' : 'visibility_off' }} </mat-icon>
+        </mat-form-field>
+    
+        <button mat-raised-button class="submit-button" type="submit" [disabled]="miFormulario.invalid">
+            Registrar cuenta
+        </button>
+    
+        <div class="link">
+            <span> ¿Ya tienes una cuenta? </span>
+            <a routerLink="../login"> Ingresa aquí </a>
+        </div>
+    </form>
+</div>
