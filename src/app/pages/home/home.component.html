@@ -1,0 +1,11 @@
+<h1> Personajes de Naruto </h1>
+
+<ul>
+    @for (ninja of ninjas; track ninja.id) {
+        <li> {{ ninja.name }} </li>
+    } @empty {
+        <li> No hay ninjas </li>
+    }
+</ul>
+
+<h2> Hola </h2>

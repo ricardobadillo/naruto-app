@@ -1,0 +1,64 @@
+<mat-sidenav-container autosize>    
+    <mat-sidenav #sidenav mode="side" position="start" fixedInViewport="true">
+        <div>            
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+
+        <li>
+            <a mat-list-item routerLink="identificacion/lista" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>menu_book</mat-icon>
+                <span>Ver usuarios</span>
+            </a>
+        </li>
+        
+        <li>
+            <a mat-list-item routerLink="identificacion/agregar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Agregar</span>
+            </a>
+        </li>
+    </mat-sidenav>
+    
+    <div>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span routerLink="identificacion/lista" style="cursor: pointer;">URBE</span>
+        <mat-icon style="cursor: pointer;">logout</mat-icon>
+    </div>
+
+    <div class="container">
+        <!-- <router-outlet></router-outlet> -->
+    </div>
+
+    <mat-sidenav #sidenav mode="side" opened position="end" [fixedInViewport]="true">
+        <div>            
+            <span routerLink="identificacion/lista" style="cursor: pointer;">URBE</span>
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+
+        <li>
+            <a mat-list-item routerLink="identificacion/lista" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>menu_book</mat-icon>
+                <span>Ver usuarios</span>
+            </a>
+        </li>
+        
+        <li>
+            <a mat-list-item routerLink="identificacion/agregar" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span>Agregar</span>
+            </a>
+        </li>
+    </mat-sidenav>
+</mat-sidenav-container>
+
+
+<footer style="background-color: red;">
+    roejdpeijdie Footer
+</footer>
