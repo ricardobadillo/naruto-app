@@ -8,4 +8,8 @@
     }
 </ul>
 
-<h2> Hola </h2>
+<button (click)="changeState()"> {{ showText ? 'Ocultar' : 'Mostrar' }} </button>
+
+@if (showText) {
+    <p> Contenido que se muestra y se oculta. </p>
+}

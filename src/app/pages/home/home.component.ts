@@ -10,9 +10,15 @@ import { NgIf } from '@angular/common';
 })
 export class HomeComponent {
 
+  showText = true;
+
   ninjas = [
     { id: 1, name: 'Naruto' },
     { id: 2, name: 'Sasuke' },
     { id: 3, name: 'Sakura' },
   ];
+
+  changeState(): void {
+    this.showText = !this.showText;
+  }
 }
