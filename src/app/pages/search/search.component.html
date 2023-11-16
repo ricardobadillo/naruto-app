@@ -1,0 +1,43 @@
+<div>
+    <input type="text" (keydown.enter)="changeName($event)">
+
+    <h1> Nombre:  {{ name() }} </h1>
+</div>
+
+<div>
+    <input type="text" (keydown.enter)="putWord($event)">
+    
+    <div class="list">
+        <h2> Lista de palabras </h2>
+    
+        <ul>
+            @for (item of arrayData(); track $index;) {
+                <li>
+                    <span>
+                        {{ $index + 1 }} {{ item }}
+                    </span>
+        
+                    <button (click)="deleteWord($index)"> Borrar item </button>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div>
+    <input type="text" (keydown.enter)="putPerson($event)">
+
+    <div class="list">
+        <h2> Lista de Personas </h2>
+    
+        <ul>
+            @for (item of personas(); track $index;) {
+                <li>
+                    <span>
+                        {{ $index + 1 }} {{ item.nombre }} tiene {{ item.edad }} años.
+                    </span>
+                </li>
+            }
+        </ul>
+    </div>    
+</div>
